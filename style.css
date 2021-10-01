@@ -1,6 +1,24 @@
 body{
   background: white;
 }
+.buttondiv{
+  position: absolute;
+  background: none;
+  right: 4%;
+}
+#mainbutton{
+  border: 1px solid grey;
+  cursor: pointer;
+  height: 30px;
+  width: auto;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  background: black;
+}
+#mainbutton:hover{
+  background: linear-gradient(90deg,#c89301,#55e7fc);
+}
 .maincontainer{
   display: none;
   position: absolute;
