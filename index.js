@@ -12,6 +12,7 @@ mybutton2.addEventListener("click",flipcardback);
 
 function popupbox(){
     maincontainer.style.display = "block";
+    
 }
 function flipcard(){
     card.classList.toggle("flipcard");
