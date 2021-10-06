@@ -2,28 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login/Signup Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-      <div class="buttondiv">
-        <button id="mainbutton">click here to popup</button>
-      </div>
-      <div class="maincontainer" id="maincontainer">
-          <div class="card" id="card">
-              <div class="front">
-                  <div id="close">X</div>
-                  <h1 class="header">Customer Signin</h1>
-                  <div class="input-field"><input placeholder="Email" class="validate"></div>
-                  <div class="input-field"><input placeholder="Password" class="validate"></div>
-                  <button id="mybutton">Signin</button>
-              </div>
-              <div class="back">
-                  <h1>Content of back</h1>
-                  <button id="mybutton2">Signup</button>
-              </div>
-          </div>
-      </div>
+      <header class="topbar"></header>
+      <section class="middlebar">
+        <nav class="leftside">
+          <img src="loginlogo.png" alt="loginlogo" class="logoimg">
+        </nav>
+        <article class="rightside">
+          <button class="Clnt_btn">Client</button>
+          <button class="Cust_btn">Customer</button>
+        </article>
+      </section>
+      <footer class="bottombar"></footer>
   </body>
   <script src="index.js"></script>
 </html>

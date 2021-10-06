@@ -1,88 +1,72 @@
-body{
-  background: white;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.buttondiv{
-  position: absolute;
-  background: none;
-  right: 4%;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
-#mainbutton{
-  border: 1px solid grey;
-  cursor: pointer;
-  height: 30px;
-  width: auto;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  background: black;
-}
-#mainbutton:hover{
-  background: linear-gradient(90deg,#c89301,#55e7fc);
-}
-.maincontainer{
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
   display: none;
-  position: absolute;
-  width: 300px;
-  height: 450px;
-  background: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
-.card{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: all 0.8s ease;
-}
-#close{
-  position: absolute;
-  color: black;
-  align-items: center;
-  height: 20px;
-  width: 20px;
-  right: 10px;
-  top: 5px;
-  background: rgba(230, 19, 19, 0.89);
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 50%;
-}
-.front{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  background: rgba(118, 223, 92, 0.226);
-  box-shadow: 10px 10px 10px gray;
-  color: white;
+
+/* Style the header */
+.topbar {
+  background-color: #8ee4e7;
+  padding: 30px;
   text-align: center;
-}
-.back{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background: purple;
-  box-shadow: 10px 10px 10px gray;
+  font-size: 35px;
   color: white;
-  text-align: center;
-  transform: rotateY(180deg);
 }
-.flipcard{
-  transform: rotateY(180deg);
+
+/* Create two columns/boxes that floats next to each other */
+.leftside {
+  float: left;
+  width: 50%;
+  height: 600px;
+  background: #e78ee7;
 }
-.input-field .validate {
+
+.logoimg{
+  height: 100%;
+  width: 100%;
+}
+
+.rightside {
+  float: left;
   padding: 20px;
-  font-size: 16px;
-  border-radius: 10px;
-  border: none;
-  margin-bottom: 15px;
-  background: rgba(255,255,255,0.05);
-      border-top: 1px solid rgba(255,255,255,0.2);
-      border-left: 1px solid rgba(255,255,255,0.2);
-      box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
-  outline: none;
+  width: 50%;
+  background-color: #e78ee7;
+  height: 600px;
 }
+
+/* Clear floats after the columns */
+.middlebar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.bottombar {
+  background-color: #e78ee7;
+  padding: 10px;
+  height: 200px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  .leftside, .rightside {
+    width: 100%;
+    height: auto;
+  }
+}
+
