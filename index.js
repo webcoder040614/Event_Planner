@@ -22,3 +22,9 @@ function flipcardback(){
 function closebox(){
     maincontainer.style.display = "none";
 }
+/*
+const CustBtn = document.getElementById("CustBtn");
+const ClntBtn = document.getElementById("ClntBtn");
+
+CustBtn.addEventListener("click",opencustpopup);
+ClntBtn.addEventListener("click",openclntpopup);*/
