@@ -182,6 +182,7 @@ body::-webkit-scrollbar {
 }
 
 .maincontainer{
+  display: none;
   position: absolute;
   width: 370px;
   height: 510px;
@@ -325,22 +326,23 @@ i span{
   font-family: 'Poppins',sans-serif;
 }
 .signup{
-  font-size: 15px;
+  font-size: 16px;
   color: white;
   font-family: 'Poppins',sans-serif;
 }
-#mybutton{
+#signupbtn{
   border: none;
   background: none;
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
 }
-.signup #mybutton{
+.signup #signupbtn{
   color: #3498db;
   text-decoration: none;
 }
-.signup #mybutton:hover{
+.signup #signupbtn:hover{
   text-decoration: underline;
 }
 

@@ -1,30 +1,21 @@
-const mainbutton = document.getElementById("mainbutton");
+const CustBtn = document.getElementById("CustBtn");
 const maincontainer = document.getElementById("maincontainer");
-const card = document.getElementById("card");
-const mybutton = document.getElementById("mybutton");
-const mybutton2 = document.getElementById("mybutton2");
 const close = document.getElementById("close");
+const signupbtn = document.getElementById("signupbtn");
+const card = document.getElementById("card");
+const closeback = document.getElementById("closeback");
 
-mainbutton.addEventListener("click",popupbox);
+CustBtn.addEventListener("click",popupbox);
 close.addEventListener("click",closebox);
-mybutton.addEventListener("click",flipcard);
-mybutton2.addEventListener("click",flipcardback);
+closeback.addEventListener("click",closebox);
+signupbtn.addEventListener("click",flipcard);
 
 function popupbox(){
     maincontainer.style.display = "block";
 }
-function flipcard(){
-    card.classList.toggle("flipcard");
-}
-function flipcardback(){
-    card.classList.toggle("flipcard");
-}
 function closebox(){
     maincontainer.style.display = "none";
 }
-/*
-const CustBtn = document.getElementById("CustBtn");
-const ClntBtn = document.getElementById("ClntBtn");
-
-CustBtn.addEventListener("click",opencustpopup);
-ClntBtn.addEventListener("click",openclntpopup);*/
+function flipcard(){
+    card.classList.toggle("flipcard");
+}
