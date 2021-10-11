@@ -31,16 +31,14 @@ body::-webkit-scrollbar {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* Add the blur effect */
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
 }
 
 /* Style the header */
 .topbar{
   position: fixed;
+  background: linear-gradient(to top, rgba(255,0,0,0), rgb(255, 196, 0));
   padding: 5px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 100%;
   height: 50px;
 }
@@ -50,7 +48,7 @@ body::-webkit-scrollbar {
   width: 100px;
   height: 100%;
   margin-left: 10px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 .cartlogo,.searchbutton,.username{
@@ -58,14 +56,14 @@ body::-webkit-scrollbar {
   width: 50px;
   height: 100%;
   margin-right: 10px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 .middlebar{
   display: flex;
   position: absolute;
   padding: 5px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 100%;
   height: 600px;
   margin-top: 50px;
@@ -80,17 +78,13 @@ body::-webkit-scrollbar {
   width: 10px;
   height: 100%;
   margin-left: 10px;
-  border: 1px solid black;
-}
-
-.button{
-  margin-right: 5px;
+  /*border: 1px solid black;*/
 }
 
 .bottombar{
   position: absolute;
   padding: 5px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 100%;
   height: 200px;
   margin-top: 650px;
@@ -101,7 +95,7 @@ body::-webkit-scrollbar {
   width: 600px;
   height: 100%;
   margin-left: 10px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 .signatre_app_links{
@@ -110,7 +104,7 @@ body::-webkit-scrollbar {
   width: 150px;
   height: 100px;
   margin-right: 10px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 .buttons{
@@ -134,7 +128,6 @@ body::-webkit-scrollbar {
   background: white;
     border-top: 1px solid rgba(255,255,255,0.2);
     border-left: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
   overflow: hidden;
   transition: 0.6s;
 }
@@ -173,6 +166,7 @@ body::-webkit-scrollbar {
 }
 .cb:hover{
   color: #f2f2f2;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
 }
 .cb:hover:first-child{
   background: #206592;
@@ -183,7 +177,7 @@ body::-webkit-scrollbar {
 
 .maincontainer{
   display: none;
-  position: absolute;
+  position: fixed;
   width: 370px;
   height: 510px;
   background: none;
@@ -213,9 +207,45 @@ body::-webkit-scrollbar {
   box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
 }
 
+.back{
+  position: absolute;
+  text-align: center;
+  padding: 30px 32px;
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,0.04);
+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+  transform: rotateY(180deg);
+}
+
+.flipcard{
+  transform: rotateY(180deg);
+}
+
+#close, #back_close{
+  margin-left: 300px;
+  margin-top: -46px;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.back header{
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  font-family: 'Montserrat',sans-serif;
+}
+
 .front header{
   color: white;
-  font-size: 33px;
+  font-size: 28px;
   font-weight: 600;
   margin: 0 0 35px 0;
   font-family: 'Montserrat',sans-serif;
@@ -285,7 +315,7 @@ body::-webkit-scrollbar {
 }
 .login{
   color: white;
-  margin: 20px 0;
+  margin: 15px 0;
   font-family: 'Poppins',sans-serif;
 }
 .links{
@@ -294,7 +324,7 @@ body::-webkit-scrollbar {
   color: white;
   margin: 0 0 20px 0;
 }
-.facebook,.instagram{
+.facebook,.google{
   width: 100%;
   height: 45px;
   line-height: 45px;
@@ -305,9 +335,20 @@ body::-webkit-scrollbar {
   background: #4267B2;
   border: 1px solid #3e61a8;
 }
-.instagram{
-  background: #E1306C;
-  border: 1px solid #df2060;
+.google{
+  background: #ffffff;
+  color: black;
+  border: 1px solid #ffffff;
+}
+.google i{
+  margin-right: 5px;
+}
+.fa-google {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 .facebook:hover{
   background: #3e61a8;
@@ -330,43 +371,19 @@ i span{
   color: white;
   font-family: 'Poppins',sans-serif;
 }
-#signupbtn{
+#signupbtn,#Signinbtn{
   border: none;
   background: none;
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
 }
-.signup #signupbtn{
+.signup #signupbtn,#Signinbtn{
   color: #3498db;
   text-decoration: none;
 }
-.signup #signupbtn:hover{
+.signup #signupbtn,#Signinbtn:hover{
   text-decoration: underline;
 }
 
-#close{
-  margin-left: 300px;
-  margin-top: -36px;
-  border: none;
-  background: none;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.back{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background: rgba(255,255,255,0.04);
-  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
-  text-align: center;
-  transform: rotateY(180deg);
-}
-.flipcard{
-  transform: rotateY(180deg);
-}
