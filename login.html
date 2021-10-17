@@ -2,22 +2,130 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login/Signup Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
-      <header class="topbar"></header>
-      <section class="middlebar">
-        <nav class="leftside">
-          <img src="loginlogo.png" alt="loginlogo" class="logoimg">
-        </nav>
-        <article class="rightside">
-          <button class="Clnt_btn">Client</button>
-          <button class="Cust_btn">Customer</button>
-        </article>
-      </section>
-      <footer class="bottombar"></footer>
+      <div class="bg-image" id="bg_image"></div>
+      <div class="topbar">
+        <div class="headerlogo">
+          Logo
+        </div>
+        <div class="website_name">
+          website name
+        </div>
+        <div class="cartlogo">
+          cart
+        </div>
+        <div class="username">
+          User Name
+        </div>
+        <div class="searchbutton">
+          SB
+        </div>
+      </div>
+      <div class="middlebar">
+        <div class="leftside">
+          Scrolling images depends on user
+          <br>selected button from rightside division
+        </div>
+        <div class="rightside">
+          <div class="buttons">
+            <button class="cb" id="CustBtn">Customer</button>
+            <button class="cb" id="ClntBtn">Client</button>
+          </div>
+        </div>
+      </div>
+      <div class="bottombar">
+        <div class="social_network one">
+          Social network links and logos
+        </div>
+        <div class="gettoknowus two">
+          Get to Know Us<br>
+            About Us<br>
+            Careers<br>
+            Press Releases<br>
+            Amazon Cares<br>
+            Gift a Smile
+        </div>
+        <div class="signatre_app_links three">
+          Signature of the company
+          and
+          App Links
+        </div>
+      </div>
+      <div class="maincontainer" id="maincontainer">
+        <div class="card" id="card">
+          <div class="front">
+            <button id="close">X</button>
+            <header>Customer<br>Login Form</header>
+            <form action="#">
+              <div class="field">
+                <span class="fa fa-user"></span>
+                <input type="text" required placeholder="Email or Phone">
+              </div>
+              <div class="field space">
+                <span class="fa fa-lock"></span>
+                <input type="password" class="pass-key" required placeholder="Password">
+                <span class="show">SHOW</span>
+              </div>
+              <div class="pass">
+                <a href="#">Forgot Password?</a>
+              </div>
+              <div class="field">
+                <input type="submit" value="LOGIN">
+              </div>
+            </form>
+            <div class="login">Or login with</div>
+            <div class="links">
+              <div class="facebook">
+                <i class="fab fa-facebook-f"><span>Facebook</span></i>
+              </div>
+              <div class="google">
+                <i class="fab fa-google"></i><span>Google</span>
+              </div>
+            </div>
+            <div class="signup">Don't have account?
+                <button id="signupbtn">Register</button>
+            </div>
+          </div>
+          <div class="back">
+              <button id="back_close">X</button>
+              <header>Customer<br>Register Form</header>
+              <form action="#">
+                <div class="field">
+                  <span class="fa fa-user"></span>
+                  <input type="text" required placeholder="Email or Phone">
+                </div>
+                <div class="field space">
+                  <span class="fa fa-lock"></span>
+                  <input type="password" class="pass-key" required placeholder="Password">
+                  <span class="show">SHOW</span>
+                </div>
+                <div class="field space">
+                  <span class="fa fa-lock"></span>
+                  <input type="password" class="pass-key" required placeholder="Confirm Password">
+                </div>
+                <div class="field space">
+                  <input type="submit" value="REGISTER">
+                </div>
+              </form>
+              <div class="login">Or login with</div>
+            <div class="links">
+              <div class="facebook">
+                <i class="fab fa-facebook-f"><span>Facebook</span></i>
+              </div>
+              <div class="google">
+                <i class="fab fa-google"></i><span>Google</span>
+              </div>
+            </div>
+              <div class="signup">Already have account?
+                <button id="Signinbtn">Signin</button>
+            </div>
+          </div>
+      </div>
+    </div>
   </body>
   <script src="index.js"></script>
 </html>

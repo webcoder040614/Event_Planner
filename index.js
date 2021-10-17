@@ -1,24 +1,28 @@
-const mainbutton = document.getElementById("mainbutton");
+const CustBtn = document.getElementById("CustBtn");
 const maincontainer = document.getElementById("maincontainer");
-const card = document.getElementById("card");
-const mybutton = document.getElementById("mybutton");
-const mybutton2 = document.getElementById("mybutton2");
 const close = document.getElementById("close");
+const card = document.getElementById("card");
+const back_close = document.getElementById("back_close");
+const bg_image = document.getElementById("bg_image");
+const signupbtn = document.getElementById("signupbtn");
+const Signinbtn = document.getElementById("Signinbtn");
 
-mainbutton.addEventListener("click",popupbox);
+CustBtn.addEventListener("click",popupbox);
 close.addEventListener("click",closebox);
-mybutton.addEventListener("click",flipcard);
-mybutton2.addEventListener("click",flipcardback);
+back_close.addEventListener("click",closebox);
+signupbtn.addEventListener("click",flipcard);
+Signinbtn.addEventListener("click",flipcard);
 
 function popupbox(){
     maincontainer.style.display = "block";
-}
-function flipcard(){
-    card.classList.toggle("flipcard");
-}
-function flipcardback(){
-    card.classList.toggle("flipcard");
+    /* Add the blur effect */
+    bg_image.style.filter = "blur(5px)";
+
 }
 function closebox(){
     maincontainer.style.display = "none";
+    bg_image.style.filter = "none";
+}
+function flipcard(){
+    card.classList.toggle("flipcard");
 }
