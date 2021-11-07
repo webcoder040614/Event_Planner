@@ -69,6 +69,28 @@ body::-webkit-scrollbar {
   /*border: 1px solid black;*/
 }
 
+.searchinput{
+  display: none;
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+}
+
+.searchbtn{
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.searchbtn:hover{
+  background: #ccc;
+}
+
 .middlebar{
   display: flex;
   position: absolute;
