@@ -4,40 +4,48 @@
     <meta charset="UTF-8">
     <title>Category</title>
     <link rel="stylesheet" type="text/css" href="../website.css">
-    <link rel="stylesheet" type="text/css" href="Category.css">
 </head>
 <body>
     <div class="topbar">
         <div class="nav-bar">
             <div class="menu">
-                <img src="menu.png" height="50" width="50"  >
+                <img src="../menu.png" height="50" width="50"  >
             </div>
             <div class="img">
-                <img src="logo.jpg" height="100" width="100"  >
+                <img src="../logo.jpg" height="100" width="100"  >
             </div>
             <div class="btn1">
                 <button type="button" id="b1" class="loginbtn">Login</button>
-                <img src="search.png" height="40" width="30"  >
+                <img src="../search.png" height="40" width="30"  >
             </div> 
         </div>
     </div>
-    <div class="Category">
-        <div>
-            <form class="drop_down_category">
-            <select name="Category">
-                <option value="Select">--Select--</option>
-                <option value="FunctionHalls">FunctionHalls</option>
-                <option value="Beauticians">Beauticians</option>    
-                <option value="Catering">Catering</option>
-                <option value="FlowerDecorations">FlowerDecorations</option>
-                <option value="Orchestra">Orchestra</option>
-                <option value="Photographer">Photographer</option>
-            </select>
-            </form>
+    <div class="multi-selector">
+        <div class="select-category">
+            <input type="text" name="" placeholder="Choose Category" id="" class="selector">
+            <span class="down-arrow">&blacktriangledown;</span>
         </div>
-        <div>
-            <button name="Go">Go</button>
-        </div>    
+        <div class="list">
+            <label for="" class="task">
+                <input type="checkbox" name="" id="FunctionHalls">FunctionHalls
+            </label>
+            <label for="" class="task">
+                <input type="checkbox" name="" id="Beauticians">Beauticians
+            </label>
+            <label for="" class="task">
+                <input type="checkbox" name="" id="Catering">Catering
+            </label>
+            <label for="" class="task">
+                <input type="checkbox" name="" id="FlowerDecorations">FlowerDecorations
+            </label>
+            <label for="" class="task">
+                <input type="checkbox" name="" id="Orchestra">Orchestra
+            </label>
+            <label for="" class="task">
+                <input type="checkbox" name="" id="Photographer">Photographer
+            </label>
+        </div>
     </div>
+    <script src="Category.js"></script>
 </body>
 </html>
