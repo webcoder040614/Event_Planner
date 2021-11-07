@@ -47,3 +47,13 @@ input
 {
     transform: rotate(60deg);
 }
+form
+{
+    padding-left: 450px;
+    padding-top: 100px;
+}
+td
+{
+    padding-right: 200px;
+    line-height: 20px;
+}
