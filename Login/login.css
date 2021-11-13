@@ -47,6 +47,7 @@ body::-webkit-scrollbar {
   float: left;
   width: 100px;
   height: 100%;
+  margin-top: 6px;
   /*border: 1px solid black;*/
 }
 
@@ -62,6 +63,7 @@ body::-webkit-scrollbar {
 }
 
 .cartlogo,.searchbutton,.username{
+  margin-top: 6px;
   float: right;
   width: 50px;
   height: 100%;
@@ -79,7 +81,6 @@ body::-webkit-scrollbar {
 .searchbtn{
   float: right;
   padding: 6px 10px;
-  margin-top: 8px;
   margin-right: 16px;
   background: #ddd;
   font-size: 17px;
