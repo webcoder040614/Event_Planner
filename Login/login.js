@@ -17,7 +17,7 @@ function popupbox(){
     maincontainer.style.display = "block";
     /* Add the blur effect */
     bg_image.style.filter = "blur(5px)";
-
+    
 }
 function closebox(){
     maincontainer.style.display = "none";
@@ -25,4 +25,49 @@ function closebox(){
 }
 function flipcard(){
     card.classList.toggle("flipcard");
+}
+
+const ClntBtn = document.getElementById("ClntBtn");
+const maincontainer1 = document.getElementById("maincontainer1");
+const close1 = document.getElementById("close1");
+const card1 = document.getElementById("card1");
+const back_close1 = document.getElementById("back_close1");
+const signupbtn1 = document.getElementById("signupbtn1");
+const Signinbtn1 = document.getElementById("Signinbtn1");
+
+ClntBtn.addEventListener("click",popupbox1);
+close1.addEventListener("click",closebox1);
+back_close1.addEventListener("click",closebox1);
+signupbtn1.addEventListener("click",flipcard1);
+Signinbtn1.addEventListener("click",flipcard1);
+
+function popupbox1(){
+    maincontainer1.style.display = "block";
+    /* Add the blur effect */
+    bg_image.style.filter = "blur(5px)";
+
+}
+function closebox1(){
+    maincontainer1.style.display = "none";
+    bg_image.style.filter = "none";
+}
+function flipcard1(){
+    card1.classList.toggle("flipcard1");
+}
+function validateform()
+{
+    var Email=document.CustLogin.Email.value;
+    var password=document.CustLogin.password.value;
+    var regularExpression  = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/; 
+    if (Email==null || Email==""){  
+        alert("Email can't be blank");  
+        return false;  
+      }else if(password.length < 6 || password.length > 15){
+        return false;
+    }
+    else if(!regularExpression.test(password)) {
+        alert("password should contain atleast one number,one character and one special character");
+        return false;
+    }
+    
 }

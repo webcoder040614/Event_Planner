@@ -7,50 +7,65 @@
     <link rel="stylesheet" type="text/css" href="../website.css">
 </head>
 <body>
-    <div class="topbar">
-        <div class="nav-bar">
-            <div class="menu">
-                <img src="../menu.png" height="50" width="50"  >
-            </div>
-            <div class="img">
-                <img src="../logo.jpg" height="100" width="100"  >
-            </div>
-            <div class="btn1">
-                <button type="button" id="b1" class="loginbtn">Login</button>
-                <img src="../search.png" height="40" width="30"  >
-            </div> 
+    <div class="nav-bar">
+        <div class="toggle">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a href="../website.html"><li>Home</li></a>
+                        <a href=""><li>About</li></a>
+                        <a href=""><li>Chat</li></a>
+                    </ul>
+                </div>
+            </nav>
         </div>
+        <div class="Name">
+            <label for="name"><b>Event Planner</b></label>
+        </div>
+        <div class="img">
+            <img src="../Images/logo.jpg" height="100" width="100"  >
+        </div>
+        <div class="btn1">
+            <a href="../Login/login.html"><button type="button" id="b1" class="loginbtn">Login</button></a>
+            <img src="../Images/search.png" height="40" width="30"  >
+        </div> 
     </div>
-    <div class="multi-selector">
-        <div class="select-category">
-            <input type="text" name="" placeholder="Choose Category" id="" class="selector">
-            <span class="down-arrow" id="arrow">&blacktriangledown;</span>
+    <form>
+        <div class="multiselect">
+          <div class="selectBox" onclick="showCheckboxes()">
+            <select>
+              <option>Select an option</option>
+            </select>
+            <div class="overSelect"></div>
+          </div>
+          <div id="checkboxes">
+            <label for="one">
+              <input type="checkbox" id="one" />Function_halls</label>
+            <label for="two">
+              <input type="checkbox" id="two" />Beauticians</label>
+            <label for="three">
+              <input type="checkbox" id="three" />Catering</label>
+            <label for="four">
+                <input type="checkbox" id="four" />Flower_decoration
+            </label>
+            <label for="five">
+                <input type="checkbox" id="five" />Photographer
+            </label>
+            <label for="six">
+                <input type="checkbox" id="six" />orchestra
+            </label>
+          </div>
         </div>
-        <div class="list">
-            <label for="" class="task">
-                <input type="checkbox" name="" id="FunctionHalls">FunctionHalls
-            </label>
-            <label for="" class="task">
-                <input type="checkbox" name="" id="Beauticians">Beauticians
-            </label>
-            <label for="" class="task">
-                <input type="checkbox" name="" id="Catering">Catering
-            </label>
-            <label for="" class="task">
-                <input type="checkbox" name="" id="FlowerDecorations">FlowerDecorations
-            </label>
-            <label for="" class="task">
-                <input type="checkbox" name="" id="Orchestra">Orchestra
-            </label>
-            <label for="" class="task">
-                <input type="checkbox" name="" id="Photographer">Photographer
-            </label>
-        </div>
-    </div>
+      </form>
     <script src="Category.js"></script>
     <form action="../website.html">
         <div class="container">
-            <p>Please fill this form to enter your work details</p>
+            <p class="heading"><b> Please fill this form to enter your work details</b></p>
+            <p>&nbsp;</p>
             <table class="details">
                 <tr>
                     <td>
