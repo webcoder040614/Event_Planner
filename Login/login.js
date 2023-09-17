@@ -6,27 +6,6 @@ const back_close = document.getElementById("back_close");
 const bg_image = document.getElementById("bg_image");
 const signupbtn = document.getElementById("signupbtn");
 const Signinbtn = document.getElementById("Signinbtn");
-
-CustBtn.addEventListener("click",popupbox);
-close.addEventListener("click",closebox);
-back_close.addEventListener("click",closebox);
-signupbtn.addEventListener("click",flipcard);
-Signinbtn.addEventListener("click",flipcard);
-
-function popupbox(){
-    maincontainer.style.display = "block";
-    /* Add the blur effect */
-    bg_image.style.filter = "blur(5px)";
-    
-}
-function closebox(){
-    maincontainer.style.display = "none";
-    bg_image.style.filter = "none";
-}
-function flipcard(){
-    card.classList.toggle("flipcard");
-}
-
 const ClntBtn = document.getElementById("ClntBtn");
 const maincontainer1 = document.getElementById("maincontainer1");
 const close1 = document.getElementById("close1");
@@ -40,8 +19,31 @@ close1.addEventListener("click",closebox1);
 back_close1.addEventListener("click",closebox1);
 signupbtn1.addEventListener("click",flipcard1);
 Signinbtn1.addEventListener("click",flipcard1);
+CustBtn.addEventListener("click",popupbox);
+close.addEventListener("click",closebox);
+back_close.addEventListener("click",closebox);
+signupbtn.addEventListener("click",flipcard);
+Signinbtn.addEventListener("click",flipcard);
+
+function popupbox(){
+    maincontainer1.style.display = "none";
+    bg_image.style.filter = "none";
+    maincontainer.style.display = "block";
+    /* Add the blur effect */
+    bg_image.style.filter = "blur(5px)";
+    
+}
+function closebox(){
+    maincontainer.style.display = "none";
+    bg_image.style.filter = "none";
+}
+function flipcard(){
+    card.classList.toggle("flipcard");
+}
 
 function popupbox1(){
+    maincontainer.style.display = "none";
+    bg_image.style.filter = "none";
     maincontainer1.style.display = "block";
     /* Add the blur effect */
     bg_image.style.filter = "blur(5px)";
